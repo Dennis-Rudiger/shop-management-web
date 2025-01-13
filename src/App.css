@@ -270,3 +270,33 @@
   color: #F98513;
   font-weight: bold;
 }
+
+.view-toggle {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.view-toggle button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #223382;
+  border-radius: 5px;
+  background: white;
+  color: #223382;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.view-toggle button.active {
+  background: #223382;
+  color: white;
+}
+
+.sales-chart {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  margin: 2rem 0;
+}

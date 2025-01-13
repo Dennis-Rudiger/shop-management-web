@@ -10,7 +10,7 @@ function App() {
     <Router>
       <div className="App">
         <header className="shop-header">
-          <h1><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>🏪 Duka</Link></h1>
+          <h1><Link to="/" style={{ color: 'white', textDecoration: 'none' }}>🏪 Spa Nile</Link></h1>
         </header>
         <main className="shop-main">
           <nav className="shop-nav">
