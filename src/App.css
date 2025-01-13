@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #F4F1EC 0%, #DAD1C8 100%);
 }
 
 .App-logo {
@@ -14,7 +16,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #111144;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,7 +27,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #F98513;
 }
 
 @keyframes App-logo-spin {
@@ -35,4 +37,236 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.shop-header {
+  background: linear-gradient(90deg, #223382, #9BACD8);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.shop-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.shop-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: rgba(244, 241, 236, 0.9);
+  margin: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.shop-nav button {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #9BACD8 0%, #223382 100%);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.shop-nav button:hover {
+  transform: translateY(-2px);
+}
+
+.shop-nav a {
+  text-decoration: none;
+}
+
+.shop-main {
+  padding: 1rem;
+  min-height: calc(100vh - 80px);
+}
+
+.dashboard {
+  padding: 2rem;
+}
+
+.dashboard h2 {
+  color: #223382;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #111144;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  font-size: 2rem;
+  color: #F98513;
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.products-container {
+  padding: 2rem;
+}
+
+.products-container h2,
+.inventory-container h2,
+.sales-container h2 {
+  color: #223382;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.product-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.product-card h3 {
+  color: #223382;
+  margin: 1rem 0;
+}
+
+.product-card .price {
+  color: #F98513;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.product-card .stock {
+  color: #9BACD8;
+  margin: 0.5rem 0;
+}
+
+.product-card button {
+  width: 100%;
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #9BACD8 0%, #223382 100%);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:disabled {
+  background: #DAD1C8;
+  cursor: not-allowed;
+}
+
+.inventory-container,
+.sales-container {
+  padding: 2rem;
+}
+
+.inventory-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.inventory-card {
+  background: white;
+  border-radius: 15px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.stock-control {
+  margin-top: 1rem;
+}
+
+.stock-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.stock-actions button {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(135deg, #9BACD8 0%, #223382 100%);
+  color: white;
+  cursor: pointer;
+}
+
+.sales-summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.sales-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.sale-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 1rem;
+  background: white;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.total-amount,
+.total-transactions {
+  font-size: 2rem;
+  color: #F98513;
+  font-weight: bold;
 }
